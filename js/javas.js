@@ -21,11 +21,17 @@ var tdaluta = paciente.querySelector(".info-altura");
 var altura = tdaluta.textContent;
 
 
+var tdIMC = paciente.querySelector(".info-imc")
+
+
 var pesoEhValido = true;
 var alturaEhValida = true;
 
 if (peso > 1000 || peso < 0){
+	console.log("Peso inválido");
 	pesoEhValido = false;
+	tdIMC.textContent = "Peso inválido";
+	paciente.classList.add("paciente-invalido");
 }
 
 if (altura > 3.00 || altura < 0){
